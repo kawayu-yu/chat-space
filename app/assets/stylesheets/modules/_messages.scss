@@ -1,3 +1,5 @@
+@import "./config/variable";
+
 * {
   box-sizing: border-box;
 }
@@ -13,10 +15,10 @@ $Whitecolor: #ffffff;
 .side-bar {
   height: 100vh;
   width: 300px;
-  background-color: #253141;
+  background-color: $graycolor;
   &__user-name {
     height: 100px;
-    background-color: #253141;
+    background-color: $graycolor;
     color: $Whitecolor;
     display: flex;
     align-items: center;
@@ -42,7 +44,7 @@ $Whitecolor: #ffffff;
 .top-items{
   height: 20px;
   width: 260px;
-  background-color:  #253141;
+  background-color:  $graycolor;
   display: flex;
   justify-content: space-between;
   &__name {
