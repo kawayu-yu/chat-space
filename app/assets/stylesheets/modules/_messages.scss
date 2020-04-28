@@ -22,15 +22,18 @@
   &__group-list {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
-    &--group h1 {
-      color: $Whitecolor;
-      font-size: 15px;
-      padding: 20px 20px 5px 20px;
+  }
+  .group {
+    &__name {
+    color: $Whitecolor;
+    font-size: 15px;
+    padding: 20px 20px 5px 20px;
     }
-    &--group p {
+    &__message {
       color: $Whitecolor;
       font-size: 11px;
       padding: 0px 20px 40px 20px;
+      text-decoration: none;
     }
   }
 }
