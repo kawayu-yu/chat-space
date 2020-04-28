@@ -4,23 +4,15 @@
       .top-items__name
         = current_user.name
       .top-items__icons 
-        = link_to "#", class: "top-items__icons--icon-left" do
+        = link_to new_group_path, class: "top-items__icons--icon-left" do
           %i{class: 'far fa-edit'}
         = link_to edit_user_path(current_user), class: "top-items__icons--icon-right" do
           %i{class: 'fas fa-cog'}
   .side-bar__group-list
-    .side-bar__group-list--group
-      %h1 techcamp
-      %p まだメッセージがありません
-    .side-bar__group-list--group
-      %h1 techcamp
-      %p まだメッセージがありません
-    .side-bar__group-list--group
-      %h1 techcamp
-      %p まだメッセージがありません
-    .side-bar__group-list--group
-      %h1 techcamp
-      %p まだメッセージがありません
-    .side-bar__group-list--group
-      %h1 techcamp
-      %p まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
