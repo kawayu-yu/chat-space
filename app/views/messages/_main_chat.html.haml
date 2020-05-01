@@ -37,10 +37,10 @@
 
   .chat-main__message-form
     .form
-      .form__input
-        = form_for [@group, @message] do |f|
+      = form_for [@group, @message] do |f|
+        .form__input
           = f.text_field :body, class: "form__input--text", placeholder: "type a message"
           = f.label :image, class: "form__input--image" do
             = icon('fas', 'image')
             = f.file_field :image, class: "form__input--file"
-          = f.submit 'Send', class: "form__submit-btn"
+        = f.submit 'Send', class: "form__submit-btn"
