@@ -13,7 +13,7 @@
     .main-message
       .main-message__info
         .main-message__info--name
-          masa　
+          masa
         .main-message__info--date
           2020/4/26(Sun) 16:20:48
       .main-message__text
@@ -21,7 +21,7 @@
     .main-message
       .main-message__info
         .main-message__info--name
-          masa　
+          masa
         .main-message__info--date
           2020/4/26(Sun) 18:40:56
       .main-message__text
@@ -29,7 +29,7 @@
     .main-message
       .main-message__info
         .main-message__info--name
-          masa　
+          masa
         .main-message__info--date
           2020/4/26(Sun) 18:40:56
       .main-message__text
@@ -39,8 +39,8 @@
     .form
       .form__input
         = form_for [@group, @message] do |f|
-        =f.text_field :content, class: "form__input--text", placeholder: "type a message"}
-          =f.label :image, class: "form__input--image"
-            =icon('fas', 'image')
+          = f.text_field :body, class: "form__input--text", placeholder: "type a message"
+          = f.label :image, class: "form__input--image" do
+            = icon('fas', 'image')
             = f.file_field :image, class: "form__input--file"
-        = f.submit 'Send', class: "form__submit-btn"
+          = f.submit 'Send', class: "form__submit-btn"
