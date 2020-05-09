@@ -11,29 +11,8 @@
         Edit
   .chat-main__message-list
     .main-message
-      .main-message__info
-        .main-message__info--name
-          masa
-        .main-message__info--date
-          2020/4/26(Sun) 16:20:48
-      .main-message__text
-        おはよう！
-    .main-message
-      .main-message__info
-        .main-message__info--name
-          masa
-        .main-message__info--date
-          2020/4/26(Sun) 18:40:56
-      .main-message__text
-        今日は夜から雨
-    .main-message
-      .main-message__info
-        .main-message__info--name
-          masa
-        .main-message__info--date
-          2020/4/26(Sun) 18:40:56
-      .main-message__text
-        今日は夜から雨
+      = render @messages
+    
 
   .chat-main__message-form
     .form
