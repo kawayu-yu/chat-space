@@ -165,10 +165,13 @@
       display: none;
     }
   }
-  &__submit-btn{
-    width: 100px;
-    height: 50px;
-    background-color: #38aef0;
-    color: $Whitecolor;
+    &__submit-btn{
+      width: 100px;
+      height: 50px;
+      background-color: #38aef0;
+      color: $Whitecolor;
+    }
+  .new_message{
+    display: flex;
   }
 }
