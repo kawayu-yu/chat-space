@@ -9,7 +9,7 @@
           %ul 
             - @group.users.each do |user|
               %li= user.name
-      = link_to "#", class: "top-info__edit" do
+      = link_to edit_group_path(@group), class: "top-info__edit" do
         Edit
   .chat-main__message-list
     .main-message
