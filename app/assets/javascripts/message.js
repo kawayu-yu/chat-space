@@ -44,7 +44,6 @@ $(function() {
     var formData = new FormData(this);
     var url = $(this).attr('action')
 
-    console.log(url);
     $.ajax({
       url: url,
       type: "POST",
@@ -57,7 +56,11 @@ $(function() {
         var html = buildHTML(data);
         $(".main-message").append(html);
         $('form')[0].reset();
-        console.log(html);
+        $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
+        $('.form__submit-btn').prop('disabled', false);
       })
+      .fail(function() {
+          alert("メッセージの送信に失敗しました")
+      });
   })
 });
