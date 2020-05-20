@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-    respons_to do |format|
+    respond_to do |format|
       format.html
       format.json
     end
