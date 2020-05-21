@@ -76,7 +76,11 @@ $(function() {
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log('success');
+      var insertHTML = '';
+      $.each(messages, function(i,message) {
+        insertHTML += buildHTML(message)
+      });
+      $('.nessages').append(insertHTML);
     })
     .fail(function() {
       alert('error');
