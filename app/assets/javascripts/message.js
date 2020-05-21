@@ -2,7 +2,7 @@ $(function() {
     function buildHTML(message) {
       if ( message.image ) {
         var html =
-        `
+          `<div class="message">
             <div class="main-message__info">
               <div class="main-message__info--name">
                 ${message.user_name}
@@ -16,11 +16,13 @@ $(function() {
                   ${message.body}
                 </p>
                 <img class="image" src=${message.image} alt="Test">
-              </div>`
+              </div>
+          </div>`
           return html;
       } else {
         var html = 
-          `<div class="main-message__info">
+        `<div class="message">
+          <div class="main-message__info">
             <div class="main-message__info--name">
               ${message.user_name}
             </div>
@@ -32,7 +34,8 @@ $(function() {
               <p class="maim-message__text--comment">
                 ${message.body}
               </p>
-            </div>`
+            </div>
+        </div>`
           return html;
       }
     }
