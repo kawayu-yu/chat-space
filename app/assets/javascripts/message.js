@@ -69,6 +69,7 @@ $(function() {
 
   var reloadMessages = function() {
     var last_message_id = $('.message:last').data("message-id");
+    
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -86,4 +87,5 @@ $(function() {
       alert('error');
     });
   };
+  setInterval(reloadMessages, 7000);
 });
