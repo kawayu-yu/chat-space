@@ -24,6 +24,9 @@
     background-color: #2f3e51;
   }
   .group {
+    &__link {
+      text-decoration: none;
+    }
     &__name {
     color: $Whitecolor;
     font-size: 15px;
@@ -33,6 +36,7 @@
       color: $Whitecolor;
       font-size: 11px;
       padding: 0px 20px 40px 20px;
+      text-decoration: none;
       text-decoration: none;
     }
   }
